@@ -1,0 +1,13 @@
+[Unit]
+Description=My Flask Web Server Sheptunov
+After=network.target
+
+[Service]
+Type=idle
+User=sheptunov_1
+WorkingDirectory=/home/sheptunov_1/server/
+ExecStart=/usr/bin/python3 /home/sheptunov_1/server/app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
